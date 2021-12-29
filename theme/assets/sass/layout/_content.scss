@@ -1,0 +1,148 @@
+/* # CONTENT
+================================================== */
+body {
+    @include background-image( image-url("image-login-background.png") );
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* ================================================== */
+#stripe-top{
+    @include background-image( image-url("top-bar.png") );
+    height: 3px;
+}
+
+/* ================================================== */
+#menu-top{
+    background-color: darken($gray, 8);
+    color: darken($white, 8);
+    //FONT
+    font-size: 11px;
+    line-height: 14px;
+    //SPACE
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @include center-mobile();
+
+    a{
+        font-weight: bold;
+        color: lighten($white, 8);
+    }
+}
+
+/* ================================================== */
+#header-main{
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+    #header-main-image{
+        width: 200px;
+        position: absolute;
+        //@include make-md-column(3);
+        img{
+            @include img-responsive();
+            margin: 0 auto;
+        }
+    }
+    #header-main-extra{
+        position: relative;
+        margin-left: 230px;
+        img{
+            padding-top: 20px;
+            padding-bottom: 36px;
+        }
+    }
+
+    #header-main-search{
+        position: absolute;
+        right: 0;
+        margin-bottom: 0;
+        background-color: darken($gray, 8);
+        top: -30px;
+        padding: 0px 10px 3px 10px;
+        @include border-radius(0 0 10px 10px);
+
+        .form-group{
+            margin-bottom: 0;
+
+            input{
+                background-color: #1F1F1F;
+                border: none;
+                text-align: center;
+                color: lighten($white, 8);;
+                font-weight: 700;
+
+                &:focus{
+                    border: none;
+                    @include box-shadow(none);
+                }
+
+                &.placeholder {
+                    color: lighten($white, 8);;
+                    font-weight: 600;
+                }
+                &:-moz-placeholder {
+                    color: lighten($white, 8);;
+                    font-weight: 600;
+                }
+                &::-webkit-input-placeholder {
+                    color: lighten($white, 8);;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/* ================================================== */
+#home-featured{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .home-featured-carousel{
+        @include make-md-column(8);
+    }
+
+    .home-featured-events{
+        @include make-md-column(4);
+    }
+}
+
+/* ================================================== */
+#content{
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    .content-page{
+        @include make-md-column(9);
+    }
+    .content-sidebar{
+        @include make-md-column(3);
+    }
+}
+
+/* ================================================== */
+#instagram{
+    padding-bottom: 15px;
+}
+
+/* ================================================== */
+#footer-first,
+#footer-second{
+    color: darken($white, 8);
+
+    a{
+        color: $white;
+
+    }
+}
+#footer-first{
+    background-color: darken($gray, 8);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#footer-second{
+    background-color: darken($green, 8);
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
